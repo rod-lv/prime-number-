@@ -1,0 +1,48 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace HelloWold
+{
+	public static class Program
+	{
+
+    	public static void Main (string[] args)
+
+			{
+				int a=int.Parse(Console.ReadLine());
+                int n=int.Parse(Console.ReadLine());
+               int counter=1;
+        for( ;a<=n;a++){
+        	bool Fprime=prime(a);
+        	if(Fprime==true)
+        
+        	{
+        		Console.WriteLine(counter+":" +a);
+               counter++;
+        	}
+        	
+        }
+			}
+        	
+        public static bool prime(int a){
+        	
+        	bool prime=true;
+        	
+        	for(int i=2;i<a;i++){
+        		if(a%i==0){
+        		prime=false;
+        		break;
+        		}
+        	}
+        	return prime;
+        	
+        
+        }
+        	
+        }
+
+
+
+
+	}
